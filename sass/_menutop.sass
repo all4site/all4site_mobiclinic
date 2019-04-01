@@ -1,0 +1,163 @@
+.wrap_menu
+	display: grid
+	grid-template-columns: minmax(320px, 1700px)
+	justify-content: center
+.menu_top__small
+	display: none
+
+.overfolw
+	overflow: hidden
+
+.navwrapper
+	position: fixed
+	display: grid
+	width: 100%
+	height: 85px
+	z-index: 9999999
+	background: fade-out($white, .5)
+
+.menuscroll
+	background: $white
+	width: 100%
+	transition: background 0.5s ease
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2)
+	z-index: 999999
+
+.menu_top__big__logo
+	width: 80px
+	align-items: center
+	justify-self: center
+	a
+		display: grid
+
+.menu_top__big
+	display: grid
+	grid-auto-flow: column
+	justify-content: center
+	grid-template-columns: 1fr minmax(300px, 700px) 1fr
+	grid-column-gap: 4%
+
+.menu_top_big_ul
+	grid-auto-flow: column
+	grid-auto-columns: max-content
+	align-items: stretch
+	justify-content: space-between
+
+	& > li
+		&:hover
+			cursor: pointer
+
+			& > a
+				color: $red
+				font-weight: bold
+				transition: all 0.5s ease
+				position: relative
+
+				&:after
+					content: ""
+					position: absolute
+					border-bottom: 1px solid $red
+					width: 100%
+					bottom: -10px
+					left: 0px
+					opacity: 1
+
+		& > a
+			color: $blue
+			font-weight: bold
+			transition: all 0.5s ease
+			position: relative
+
+			&:after
+				content: ""
+				position: absolute
+				border-bottom: 1px solid $red
+				width: 100%
+				bottom: -10px
+				left: 0px
+				opacity: 0
+				transition: all 0.5s ease
+
+	li
+		text-transform: uppercase
+		display: grid
+		align-content: center
+		position: relative
+
+		a
+			color: $blue
+			font-weight: bold
+			transition: all 0.5s ease
+			position: relative
+
+	ul
+		display: none
+
+	.menu-item-has-children
+		position: relative
+
+		ul > li > ul
+			left: 101%
+			top: 0
+
+	.sub-menu
+		position: absolute
+		top: 100%
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2)
+
+		li
+			border-bottom: 1px solid lighten($black, 80%)
+			padding: 0px 40px 0px 10px
+			font-size: 0.8rem
+			min-width: 250px
+			white-space: nowrap
+			background: darken($white, 2%)
+			width: 100%
+
+			a
+				padding: 10px 0
+
+			a:hover
+				color: $red
+
+			&:last-child
+				border-bottom: none
+
+		.menu-item-has-children
+			&:after
+				content: ""
+				position: absolute
+				background: url("../img/right-arrow.png") no-repeat
+				width: 10px
+				height: 10px
+				right: 5px
+				top: 30%
+				background-size: cover
+				background-position: center
+				transform: rotate(-90deg)
+				transition: transform 0.5s ease
+
+			&:hover:after
+				transform: rotate(0deg)
+
+	.menu-item-has-children:hover
+		& > ul
+			display: grid
+
+.menu_top__big__social
+	grid-auto-flow: column
+	font-size: 1.2rem
+	align-items: center
+	justify-content: space-around
+
+	.icon
+		color: $blue
+		transition: transform 0.5s ease
+
+		&:hover
+			transform: scale(1.1)
+
+.menu_top__big__btn
+	align-self: center
+	padding: 10px
+	font-size: 0.8rem

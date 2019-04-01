@@ -1,0 +1,50 @@
+.home_top
+	display: grid
+	min-height: 700px
+	background: url("../img/home_top_img.png")
+	background-position: center
+	background-size: cover
+	color: $white
+
+.home_top__wrap
+	display: grid
+	grid-auto-flow: column
+	grid-auto-columns: max-content
+	justify-content: center
+	grid-column-gap: 100px
+	padding: 10px 0
+
+.home_top__text
+	display: grid
+	margin-top: 85px
+	background: fade-out($black, 0.6)
+	align-self: start
+
+.home_top__phone
+	display: grid
+	grid-auto-flow: column
+	grid-auto-columns: max-content
+	grid-column-gap: 20px
+
+.home_top__email
+	display: grid
+	grid-auto-flow: column
+	grid-column-gap: 20px
+
+.home_bottom__text
+	display: grid
+	background: fade-out($black, 0.6)
+	align-self: end
+
+.home_bottom__wrap
+	display: grid
+	grid-auto-flow: column
+	grid-column-gap: 40px
+	justify-content: center
+	align-items: center
+	padding: 10px 0
+
+.home_bottom_hr
+	width: 1px
+	height: 80%
+	background: $white

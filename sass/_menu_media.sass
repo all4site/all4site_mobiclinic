@@ -1,0 +1,40 @@
+//  Large Devices, Wide Screens
+// @media only screen and (max-width: 1200px)
+
+//
+//  Medium Devices, Desktops
+@media only screen and (max-width: 992px)
+	.menu_top__big
+		display: none
+
+	.menu_top__small
+		display: grid
+
+//  Small Devices, Tablets
+// @media only screen and (max-width: 768px)
+//
+//  Extra Small Devices, Phones
+@media only screen and (max-width: 480px)
+	.menu_top__small
+		grid-template-columns: 2fr 1fr
+
+		.cross
+			margin-right: 0
+			justify-self: center
+
+	.navtop-small-inside
+		padding-bottom: 25px
+		grid-row-gap: 20px
+		max-height: 468px
+		overflow: scroll
+
+		.btn
+			grid-template-columns: minmax(100px, 150px)
+			padding: 5px 0
+
+		.menu
+			font-size: 1rem
+
+//  Custom, iPhone Retina
+//@media only screen and (max-width: 320px)
+// //

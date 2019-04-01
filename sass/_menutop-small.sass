@@ -1,0 +1,108 @@
+.nav-top-hide
+	display: none
+	width: 100%
+	position: relative
+
+.menu_top__small
+	display: grid
+	background: $white
+
+.menu_top_small__wrap
+	display: grid
+	grid-template-columns: 2fr 1fr
+
+.menu_top__small__logo
+	justify-self: center
+	width: 150px
+
+.cross
+	display: grid
+	justify-self: end
+	margin-right: 100px
+
+	.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after
+		height: 2px
+
+	.hamburger
+		padding: 0
+		display: grid
+		align-content: center
+
+.navtop-small-inside
+	display: grid
+	grid-row-gap: 40px
+	padding-bottom: 50px
+	padding-top: 50px
+	text-align: center
+	border-top: 1px solid lighten($black, 90%)
+
+	.social
+		grid-auto-flow: column
+
+	.socialwrap
+		grid-template-columns: minmax(100px, 250px)
+		justify-content: center
+
+	.menu_top_small_ul
+		font-size: 1.3rem
+		justify-content: center
+		grid-template-columns: minmax(310px, 500px)
+
+		.active
+			display: grid
+
+		li
+			display: grid
+
+		& > li
+			transition: background 0.5s ease
+
+			& > a
+				transition: all 0.5s ease
+
+				&:hover
+					background: fade-out($blue, 0.8)
+
+		.sub-menu
+			li
+				text-align: left
+				padding: 5px 0 5px 20px
+
+		.menu-item-has-children
+			position: relative
+
+			&:after
+				content: ""
+				position: absolute
+				background: url("../img/right-arrow.png") no-repeat
+				width: 15px
+				height: 15px
+				right: 5px
+				top: 10px
+				background-size: cover
+				background-position: center
+				transform: rotate(0deg)
+				transition: transform 0.5s ease
+
+			&:hover:after
+				transform: rotate(90deg)
+
+		.menu-item-has-children:hover
+			.sub-menu
+				li
+					transition: all 0.5s ease
+
+				a
+					transition: all 0.5s ease
+
+				a:hover
+					background: fade-out($blue, 0.8)
+
+				li:hover
+					// background: fade-out($blue, 0.8)
+
+			& > ul
+				// display: grid
+
+		ul
+			display: none
