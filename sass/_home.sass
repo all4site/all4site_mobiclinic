@@ -48,3 +48,174 @@
 	width: 1px
 	height: 80%
 	background: $white
+
+.home_about
+	padding: 30px 0
+
+.home_about__text
+	h2
+		text-align: center
+
+.home_about__content
+	display: grid
+	grid-auto-flow: column
+	grid-column-gap: 30px
+	grid-template-columns: 300px 1fr
+
+//START HOME_DOING
+.home_doing
+	display: grid
+	background: url("../img/bg_green.png")
+	background-color: $green
+	padding: 30px 0
+
+	h2
+		text-align: center
+
+.home_doing__wrap
+	display: grid
+	grid-auto-flow: column
+	grid-column-gap: 20px
+	padding: 20px 0
+
+.home_doing__block
+	background: $white
+	display: grid
+	justify-items: center
+	padding: 10px
+
+	a
+		margin-bottom: 40px
+
+.home_doing__icon
+	display: grid
+	width: 150px
+	height: 150px
+	border: 2px solid $green
+	border-radius: 100%
+	justify-content: center
+	align-content: center
+	margin: 20px 0
+
+	img
+		width: 80px
+
+//END HOME_DOING
+
+// START DOCTORS
+.home_doctors
+	padding: 20px 0
+
+.accordeon
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2)
+
+.home_doctors__topaccordeon
+	display: grid
+	background: $green
+	text-align: center
+	color: $white
+	text-transform: uppercase
+	padding: 10px 0
+	border: 1px solid darken($green, 10%)
+	border-bottom: none
+
+.home_doctors__wrap
+	display: grid
+	grid-auto-columns: minmax(300px, 900px)
+	justify-content: center
+	padding: 20px 0
+
+.home_doctors__bottomaccordeon
+	display: grid
+	grid-row-gap: 20px
+	border: 1px solid darken($green, 10%)
+	border-bottom: none
+
+.home_doctors__inner
+	display: grid
+	grid-auto-flow: column
+	grid-auto-columns: minmax(200px, 250px) 1fr
+	grid-column-gap: 30px
+	padding: 10px 20px
+
+.home_doctors__img
+	display: grid
+	align-items: center
+
+.home_doctors__text
+	display: grid
+	align-content: center
+
+	h4
+		text-align: center
+
+	a
+		justify-self: end
+		padding-right: 50px
+
+// END DOCTORS
+
+// START SLIDER
+.home_slider
+	background: url("../img/bg_green.png")
+	background-color: $green
+	padding: 50px 0
+
+.home_slider__inner
+	display: grid
+	grid-auto-flow: column
+	grid-auto-columns: minmax(200px, 500px)
+	grid-column-gap: 50px
+	justify-self: center
+
+.home_slider__box
+	position: relative
+	display: grid
+
+.slick-arrow
+	position: absolute
+	width: 20px
+
+.right
+	display: grid
+	align-self: center
+	right: -20px
+
+.left
+	display: grid
+	align-self: center
+	left: -20px
+
+.home_slider__wrap
+	position: relative
+	display: grid
+	align-content: center
+
+.home_slider__text
+	position: absolute
+	top: 0
+	display: grid
+	padding: 20px
+	z-index: 99
+	color: $white
+	a
+		color: $white
+		padding-top: 20px
+		text-align: right
+		margin-right: 20px
+	h3
+		padding: 20px 0
+
+.home_slider__img
+	display: grid
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		background: fade-out($black, .4)
+		width: 100%
+		height: 100%
+.slick-slide
+	div
+		display: grid
+// END SLIDER

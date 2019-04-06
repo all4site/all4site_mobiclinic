@@ -1,0 +1,122 @@
+.map__inner
+	display: grid
+
+.footer
+	background-image: url("../img/bg_footer.jpg")
+	background-position: center
+	background-size: cover
+	position: relative
+	padding: 30px 0 0
+	overflow: hidden
+
+	&:after
+		content: ""
+		position: absolute
+		width: 100%
+		height: 100%
+		background: inherit
+		filter: blur(5px)
+		top: 0
+
+	&:before
+		content: ""
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		background: fade-out($black, 0.7)
+		z-index: 10
+
+.footer__inner
+	display: grid
+	grid-auto-flow: column
+	grid-auto-columns: 1fr 2fr 1fr
+	color: $white
+	position: relative
+	z-index: 99
+	padding-bottom: 20px
+
+	h2
+		padding-bottom: 30px
+
+.footer__contacts__inner
+	display: grid
+	text-align: center
+	grid-row-gap: 10px
+
+// START FOOTER SUBMIT FORM
+.footer__subscribe
+	display: grid
+.footer__form__wrap
+	padding-top: 20px
+
+.footer__form
+	display: grid
+	grid-auto-flow: row
+	grid-auto-columns: minmax(200px, 400px)
+	justify-content: center
+	grid-row-gap: 20px
+
+\::placeholder
+	color: $white
+	text-align: center
+
+.footer__form__input
+	padding: 10px 0
+	background-color: inherit
+	border: none
+	border-bottom: 1px solid $white
+
+.footer__form__submit
+	border: none
+	padding: 10px 50px
+	background-color: $green
+	color: $white
+	margin-top: 20px
+
+	&:hover
+		background-color: lighten($green, 10%)
+
+.footer__social
+	display: grid
+	grid-auto-flow: column
+	grid-auto-columns: min-content
+	grid-column-gap: 20px
+	justify-content: center
+	align-content: end
+
+.footer__social__inner
+	border: 1px solid $yellow
+	color: $yellow
+	width: 50px
+	height: 50px
+	border-radius: 100%
+	display: grid
+	justify-content: center
+	align-content: center
+	i
+		font-size: 1.1rem
+
+.footer_wrapmenu
+	display: grid
+	justify-content: center
+
+.menu_footer_ul
+	display: grid
+	grid-row-gap: 10px
+	text-align: center
+	text-transform: uppercase
+
+	a
+		color: $white
+
+.footer__allrights
+	position: relative
+	z-index: 99
+	background: fade-out($white, 0.9)
+	display: grid
+	padding: 20px 0
+	text-align: center
+	color: fade-out($white, 0.3)
+
+// END FOOTER SUBMIT FORM

@@ -1,0 +1,44 @@
+.doctors
+	padding-top: 100px
+
+.doctors__wrap__inner
+	display: grid
+	grid-auto-flow: column
+	grid-auto-columns: 2fr 1fr
+
+.doctors_content
+	display: grid
+
+.doctors_content__category
+	padding: 20px 0
+	background: lighten($green, 10%)
+	color: $white
+	display: grid
+	grid-auto-flow: column
+	grid-auto-columns: min-content
+	justify-content: center
+	align-items: center
+	grid-column-gap: 10px
+
+.doctors_content__icon
+	font-size: 1.1rem
+.doctors_content__information
+	display: grid
+	grid-auto-flow: column
+	grid-auto-columns: 1fr 2fr
+	grid-column-gap: 20px
+	padding: 20px 0
+
+.doctors_content__text
+	display: grid
+	grid-auto-rows: min-content min-content 1fr
+	grid-row-gap: 20px
+
+.doctors_content__img
+	display: grid
+
+.doctors__more
+	background-color: $green
+	grid-template-columns: minmax(100px, 150px)
+	padding: 5px 0
+	align-self: center
