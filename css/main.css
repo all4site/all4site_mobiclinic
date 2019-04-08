@@ -982,6 +982,99 @@ a {
   grid-auto-flow: column;
   padding-top: 20px; }
 
+.akcii__img {
+  display: grid;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+
+.pagination {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(10px, 20px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px 0 0;
+  grid-column-gap: 20px; }
+
+.page-numbers {
+  display: grid;
+  align-self: center; }
+
+.news {
+  margin-bottom: 100px; }
+
+.news_wrap__all {
+  display: grid;
+  grid-auto-columns: 2fr 1fr;
+  grid-auto-flow: column;
+  margin-top: 150px; }
+
+.news_wrap {
+  display: grid;
+  grid-row-gap: 20px;
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content; }
+
+.news_wrap__inner {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr 2fr;
+  grid-column-gap: 20px;
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content; }
+
+.news_aside {
+  display: grid;
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.news_aside__inner {
+  background: rgba(3, 81, 67, 0.7);
+  padding: 30px 50px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  grid-row-gap: 30px;
+  display: grid; }
+
+.news_content__text {
+  display: grid;
+  grid-row-gap: 20px; }
+
+.news_content__img {
+  display: grid;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+
+.news__more {
+  color: #035143;
+  text-align: right;
+  margin-right: 50px; }
+
+.category__block {
+  display: grid;
+  grid-row-gap: 10px; }
+  .category__block a {
+    color: #fff; }
+  .category__block span {
+    justify-self: start; }
+
+.category__inner {
+  display: grid;
+  grid-auto-flow: column; }
+
+.count {
+  display: grid;
+  justify-self: end !important; }
+
 @media only screen and (max-width: 992px) {
   .menu_top__big {
     display: none; }

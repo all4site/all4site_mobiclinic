@@ -5,7 +5,7 @@
 function afs_add_posttype_doctors(){
     register_post_type('doctors', array(
         'labels' => array(
-            // 'name'               => 'Мнения', // Основное название типа записи
+             'name'               => 'Доктора', // Основное название типа записи
             // 'singular_name'      => 'Мнение', // отдельное название записи типа Book
             // 'add_new'            => 'Добавить новую',
             // 'add_new_item'       => 'Добавить новую книгу',
@@ -36,7 +36,7 @@ function afs_add_posttype_doctors(){
 
 		register_post_type('terapevts', array(
         'labels' => array(
-            // 'name'               => 'Мнения', // Основное название типа записи
+             'name'               => 'Терапевты', // Основное название типа записи
             // 'singular_name'      => 'Мнение', // отдельное название записи типа Book
             // 'add_new'            => 'Добавить новую',
             // 'add_new_item'       => 'Добавить новую книгу',
@@ -67,7 +67,7 @@ function afs_add_posttype_doctors(){
 
 		 register_post_type('nevrapatolog', array(
         'labels' => array(
-            // 'name'               => 'Мнения', // Основное название типа записи
+             'name'               => 'Неврапатолог', // Основное название типа записи
             // 'singular_name'      => 'Мнение', // отдельное название записи типа Book
             // 'add_new'            => 'Добавить новую',
             // 'add_new_item'       => 'Добавить новую книгу',
@@ -98,7 +98,7 @@ function afs_add_posttype_doctors(){
 
 		 register_post_type('hirurgs', array(
         'labels' => array(
-            // 'name'               => 'Мнения', // Основное название типа записи
+            'name'               => 'Хирурги', // Основное название типа записи
             // 'singular_name'      => 'Мнение', // отдельное название записи типа Book
             // 'add_new'            => 'Добавить новую',
             // 'add_new_item'       => 'Добавить новую книгу',
@@ -129,7 +129,7 @@ function afs_add_posttype_doctors(){
 
 		 register_post_type('dermatolog', array(
         'labels' => array(
-            // 'name'               => 'Мнения', // Основное название типа записи
+             'name'               => 'Дерматологи', // Основное название типа записи
             // 'singular_name'      => 'Мнение', // отдельное название записи типа Book
             // 'add_new'            => 'Добавить новую',
             // 'add_new_item'       => 'Добавить новую книгу',
@@ -158,9 +158,9 @@ function afs_add_posttype_doctors(){
 				// 'show_in_rest'       => true
 		));
 
-		 register_post_type('newssss', array(
+		 register_post_type('news', array(
         'labels' => array(
-            // 'name'               => 'Мнения', // Основное название типа записи
+             'name'               => 'Новости', // Основное название типа записи
             // 'singular_name'      => 'Мнение', // отдельное название записи типа Book
             // 'add_new'            => 'Добавить новую',
             // 'add_new_item'       => 'Добавить новую книгу',
@@ -184,14 +184,14 @@ function afs_add_posttype_doctors(){
         'has_archive' => true,
         'hierarchical' => false,
         'menu_position' => 20,
-				'supports' => array('title','thumbnail', 'editor'),
+				'supports' => array('title','thumbnail', 'editor','custom-fields'),
 				'taxonomies' => array('category'),
 				// 'show_in_rest'       => true
     ));
 		 register_post_type('akcii', array(
         'labels' => array(
-            // 'name'               => 'Мнения', // Основное название типа записи
-            // 'singular_name'      => 'Мнение', // отдельное название записи типа Book
+             'name'               => 'Акции', // Основное название типа записи
+//             'singular_name'      => 'Акции', // отдельное название записи типа Book
             // 'add_new'            => 'Добавить новую',
             // 'add_new_item'       => 'Добавить новую книгу',
             // 'edit_item'          => 'Редактировать книгу',
@@ -214,9 +214,9 @@ function afs_add_posttype_doctors(){
         'has_archive' => true,
         'hierarchical' => false,
         'menu_position' => 20,
-				'supports' => array('title','thumbnail', 'editor'),
-				'taxonomies' => array('category'),
-				// 'show_in_rest'       => true
+		'supports' => array('title','thumbnail', 'editor'),
+		'taxonomies' => array('category'),
+		// 'show_in_rest'       => true
     ));
 }
 ?>

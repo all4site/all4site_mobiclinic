@@ -9,8 +9,8 @@ function all4site_pagination() {
 		'format'  => '',
 		'current' => max( 1, get_query_var('paged') ),
 		'total'   => $wp_query->max_num_pages,
-		'prev_text' => '<img src="/wp-content/themes/all4site/img/left.svg" alt=""/>',
-		'next_text' => '<img src="/wp-content/themes/all4site/img/right.svg" alt=""/>'
+		'prev_text' => '<img src="/wp-content/themes/all4site_mobiclinic/img/left.svg" alt=""/>',
+		'next_text' => '<img src="/wp-content/themes/all4site_mobiclinic/img/right.svg" alt=""/>'
 	);
 
 	$result = paginate_links( $args );

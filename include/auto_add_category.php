@@ -21,6 +21,9 @@ function afs_category_add() {
 	if($posttype == "akcii"){
 		wp_set_post_categories($postId, array(12), true);
 	}
+	if($posttype == "news"){
+		wp_set_post_categories($postId, array(13), true);
+	}
 }
 
 ?>
