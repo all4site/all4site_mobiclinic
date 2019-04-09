@@ -21,7 +21,7 @@
 		  ) ); ?>
 		   <div class="doctors_content__category">
 			 <i class="fas fa-spinner doctors_content__icon fa-spin"></i>
-			 <h2 class='tac'><?php echo $category->name; ?></h2>
+			 <h2 class='tac'><?php echo $category->name;?></h2>
 		   </div>
 		  <?php foreach ( $posts as $post ) {
 		   setup_postdata( $post ); ?>

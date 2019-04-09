@@ -27,3 +27,5 @@ add_filter( 'template_include', 'afs_filter_news', 99 );
 //Setup
 add_theme_support('post-thumbnails');
 
+
+

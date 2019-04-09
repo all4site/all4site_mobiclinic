@@ -218,5 +218,36 @@ function afs_add_posttype_doctors(){
 		'taxonomies' => array('category'),
 		// 'show_in_rest'       => true
     ));
+
+		 register_post_type('costs', array(
+        'labels' => array(
+             'name'               => 'Акции', // Основное название типа записи
+//             'singular_name'      => 'Акции', // отдельное название записи типа Book
+            // 'add_new'            => 'Добавить новую',
+            // 'add_new_item'       => 'Добавить новую книгу',
+            // 'edit_item'          => 'Редактировать книгу',
+            // 'new_item'           => 'Новая книга',
+            // 'view_item'          => 'Посмотреть книгу',
+            // 'search_items'       => 'Найти книгу',
+            // 'not_found'          => 'Книг не найдено',
+            // 'not_found_in_trash' => 'В корзине книг не найдено',
+            'parent_item_colon' => '',
+            'menu_name' => 'Цены',
+
+        ),
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => true,
+        'menu_position' => 20,
+		'supports' => array('title'),
+		// 'taxonomies' => array('category'),
+		// 'show_in_rest'       => true
+    ));
+
 }
-?>
