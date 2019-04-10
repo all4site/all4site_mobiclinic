@@ -36,7 +36,8 @@
 				<?php the_post_thumbnail(); ?>
 			</div>
 			<div class="home_about__text">
-				<h2><?php echo $post_home__about['post_title']; ?></h2>
+				<h2><?php echo $post_home__about['post_title']; ?>
+				</h2>
 				<?php echo $post_home__about['post_content']; ?>
 			</div>
 		</div>
@@ -100,48 +101,51 @@
 		<div class="home_doctors__wrap">
 			<?php
 			$categories = get_categories(
-				array(
+				[
 					'orderby'    => 'name',
 					'order'      => 'ASC',
 					'child_of'   => '4',
 					'hide_empty' => 0,
-				)
+				]
 			);
 			?>
 			<div class="accordeon">
 				<?php
 				foreach ( $categories
-
 					as $category ) {
 					wp_reset_postdata();
 					$catID = $category->cat_ID;
 					$posts = get_posts(
-						array(
+						[
 							// 'numberposts' => 5,
 							'category'  => $catID,
 							'post_type' => 'any',
-						)
+						]
 					);
 					?>
 
 					<div class="topAccordeon home_doctors__topaccordeon active">
-						<h5><?php echo $category->name; ?></h5>
+						<h5><?php echo $category->name; ?>
+						</h5>
 					</div>
 					<div class="bottomAccordeon home_doctors__bottomaccordeon">
-						<?php foreach ( $posts as $post ) { ?>
+						<?php
+						foreach ( $posts as $post ) {
+							?>
 							<div class="home_doctors__inner">
 								<div class="home_doctors__img">
 									<?php the_post_thumbnail(); ?>
 								</div>
 								<div class="home_doctors__text">
-									<h4><?php the_title(); ?></h4>
+									<h4><?php the_title(); ?>
+									</h4>
 									<?php the_content(); ?>
 									<a href="<?php the_permalink(); ?>">подробнее</a>
 								</div>
 							</div>
-						<?php
-					}
-					echo '</div>';
+							<?php
+						}
+						echo '</div>';
 				}
 				?>
 				</div>
@@ -159,11 +163,11 @@
 			<div class="home_slider__box">
 				<?php
 				$posts = get_posts(
-					array(
+					[
 						'category_name' => 'novosti',
 						'post_type'     => 'any',
 						'numberposts'   => 5,
-					)
+					]
 				);
 				foreach ( $posts as $post ) {
 					setup_postdata( $post );
@@ -173,7 +177,8 @@
 							<?php the_post_thumbnail(); ?>
 						</div>
 						<div class="home_slider__text">
-							<h3 class='tac'><?php the_title(); ?></h3>
+							<h3 class='tac'><?php the_title(); ?>
+							</h3>
 							<span>
 								<?php
 								$content = get_the_content();
@@ -183,21 +188,22 @@
 							<a href="<?php the_permalink(); ?>" class="more">подробнее...</a>
 						</div>
 					</div>
-				<?php
-			}
-			wp_reset_postdata();
-			?>
+					<?php
+				}
+				wp_reset_postdata();
+				?>
 			</div>
+
 
 
 			<div class="home_slider__box">
 				<?php
 				$posts = get_posts(
-					array(
+					[
 						'category_name' => 'novosti',
 						'post_type'     => 'any',
 						'numberposts'   => 5,
-					)
+					]
 				);
 				foreach ( $posts as $post ) {
 					setup_postdata( $post );
@@ -207,7 +213,8 @@
 							<?php the_post_thumbnail(); ?>
 						</div>
 						<div class="home_slider__text">
-							<h3 class='tac'><?php the_title(); ?></h3>
+							<h3 class='tac'><?php the_title(); ?>
+							</h3>
 							<span>
 								<?php
 								$content = get_the_content();
@@ -217,17 +224,16 @@
 							<a href="<?php the_permalink(); ?>" class="more">подробнее...</a>
 						</div>
 					</div>
-				<?php
-			}
-			wp_reset_postdata();
-			?>
+					<?php	} wp_reset_postdata(); ?>
 			</div>
 
 		</div>
+
 	</div>
 	</div>
 </section>
 <!-- END SLIDER -->
 
 
-<?php get_footer(); ?>
+<?php
+get_footer();
