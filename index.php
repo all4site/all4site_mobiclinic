@@ -28,7 +28,7 @@
 <!-- START ABOUT -->
 <section class="home_about">
 	<?php
-	$post_home__about = get_post( 14, ARRAY_A );
+	$post_home__about = get_post(167, ARRAY_A);
 	?>
 	<div class="wrap">
 		<div class="home_about__content">
@@ -38,7 +38,12 @@
 			<div class="home_about__text">
 				<h2><?php echo $post_home__about['post_title']; ?>
 				</h2>
-				<?php echo $post_home__about['post_content']; ?>
+				<p>
+					<?php $content =  $post_home__about['post_content'];
+					echo mb_strimwidth($content, 0, 500, '...'); ?>
+				</p>
+				<a href="<?php the_permalink(167); ?>">подробнее...</a>
+
 			</div>
 		</div>
 	</div>
@@ -111,8 +116,8 @@
 			?>
 			<div class="accordeon">
 				<?php
-				foreach ( $categories
-					as $category ) {
+				foreach ($categories
+					as $category) {
 					wp_reset_postdata();
 					$catID = $category->cat_ID;
 					$posts = get_posts(
@@ -130,7 +135,7 @@
 					</div>
 					<div class="bottomAccordeon home_doctors__bottomaccordeon">
 						<?php
-						foreach ( $posts as $post ) {
+						foreach ($posts as $post) {
 							?>
 							<div class="home_doctors__inner">
 								<div class="home_doctors__img">
@@ -143,9 +148,9 @@
 									<a href="<?php the_permalink(); ?>">подробнее</a>
 								</div>
 							</div>
-							<?php
-						}
-						echo '</div>';
+						<?php
+					}
+					echo '</div>';
 				}
 				?>
 				</div>
@@ -169,8 +174,8 @@
 						'numberposts'   => 5,
 					]
 				);
-				foreach ( $posts as $post ) {
-					setup_postdata( $post );
+				foreach ($posts as $post) {
+					setup_postdata($post);
 					?>
 					<div class="home_slider__wrap">
 						<div class="home_slider__img">
@@ -182,16 +187,16 @@
 							<span>
 								<?php
 								$content = get_the_content();
-								echo mb_strimwidth( $content, 0, 250, '...' );
+								echo mb_strimwidth($content, 0, 250, '...');
 								?>
 							</span>
 							<a href="<?php the_permalink(); ?>" class="more">подробнее...</a>
 						</div>
 					</div>
-					<?php
-				}
-				wp_reset_postdata();
-				?>
+				<?php
+			}
+			wp_reset_postdata();
+			?>
 			</div>
 
 
@@ -205,8 +210,8 @@
 						'numberposts'   => 5,
 					]
 				);
-				foreach ( $posts as $post ) {
-					setup_postdata( $post );
+				foreach ($posts as $post) {
+					setup_postdata($post);
 					?>
 					<div class="home_slider__wrap">
 						<div class="home_slider__img">
@@ -218,13 +223,14 @@
 							<span>
 								<?php
 								$content = get_the_content();
-								echo mb_strimwidth( $content, 0, 250, '...' );
+								echo mb_strimwidth($content, 0, 250, '...');
 								?>
 							</span>
 							<a href="<?php the_permalink(); ?>" class="more">подробнее...</a>
 						</div>
 					</div>
-					<?php	} wp_reset_postdata(); ?>
+				<?php	}
+			wp_reset_postdata(); ?>
 			</div>
 
 		</div>

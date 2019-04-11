@@ -1,0 +1,86 @@
+.header_big
+	text-transform: uppercase
+.header
+	font-weight: bold
+.contacts
+	padding-top: 100px
+	padding-bottom: 50px
+
+.contacts_top__wrap
+	display: grid
+	grid-auto-flow: column
+	grid-auto-columns: minmax(100px, 300px)
+	justify-content: center
+
+.contacts_phone
+	display: grid
+	background: fade-out($aside, 0.3)
+	color: $white
+	padding: 20px 20px 50px 20px
+	align-items: center
+	align-self: start
+	grid-row-gap: 15px
+	grid-auto-rows: min-content
+
+.contacts_address
+	display: grid
+	padding: 20px
+	grid-auto-rows: min-content
+	text-align: center
+
+
+.contacts__work
+	display: grid
+	background: $form
+	color: $white
+	grid-template-columns: max-content 1fr
+	padding: 20px
+	grid-row-gap: 25px
+
+	h3
+		grid-column: span 2
+
+.contacts_bottom__wrap
+	background: lighten($form, 15%)
+	margin-top: 100px
+	justify-content: center
+	display: grid
+	position: relative
+
+	&:after
+		position: absolute
+		content: ""
+		width: 0
+		height: 0
+		right: 0
+		border-bottom: 150px solid lighten($form, 18%)
+		border-left: 150px solid transparent
+		transform: rotate(90deg)
+		box-shadow: 7px 7px 7px rgba(0,0,0,0.3)
+	&:before
+		position: absolute
+		content: ""
+		width: 0
+		height: 0
+		right: 0
+		border-bottom: 150px solid lighten($form, 18%)
+		border-left: 150px solid $white
+		transform: rotate(90deg)
+
+.contacts__greenbox
+	display: grid
+	width: 800px
+	grid-template-columns: max-content 1fr
+	color: $white
+	grid-row-gap: 30px
+	padding: 20px 0
+
+.left
+	justify-self: start
+
+.right
+	justify-self: end
+.center
+	justify-self: center
+.holiday
+	color: $aside

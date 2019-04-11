@@ -1,0 +1,95 @@
+.hidden
+	display: none
+
+.dokrot__single__wrap
+	display: grid
+	grid-template-columns: minmax(310px, 1000px)
+	justify-content: center
+	padding: 0 10px
+	grid-row-gap: 30px
+
+.doktor__single
+	padding: 100px 0 50px
+
+.doktor__single__top
+	display: grid
+	grid-auto-flow: column
+	grid-auto-columns: 1fr 0.6fr
+	justify-content: stretch
+
+.doktor__single__about
+	display: grid
+	background: fade-out($aside, 0.3)
+	color: $white
+	padding: 30px 20px
+	grid-auto-rows: min-content
+
+.doktor__single__h
+	text-transform: uppercase
+
+.doktors__box
+	display: grid
+	grid-auto-flow: column
+	border-bottom: 1px solid fade-out($white, 0.5)
+	margin: 20px 0
+	padding: 5px
+
+.doktors__info
+	justify-self: end
+
+.doktor__single__img
+	display: grid
+	max-width: 580px
+	max-height: 580px
+
+	img
+		height: 100%
+		object-fit: contain
+
+.doktors__box__link
+	color: $give
+	text-transform: capitalize
+	justify-self: end
+
+.doktor__single__name
+	text-transform: capitalize
+	text-align: center
+	padding-top: 30px
+
+.doktor__single__bottom
+	display: grid
+	grid-auto-flow: column
+	grid-template-columns: 1fr 0.7fr
+	justify-content: stretch
+	grid-column-gap: 10px
+
+.doktor__single__form
+	display: grid
+	grid-row-gap: 70px
+	margin-top: 50px
+.doktor__single__signup
+	background: lighten($form, 15%)
+	display: grid
+	padding: 30px 50px
+
+.datepicker
+	width: 100%
+
+.doktor__signup__h
+	color: $white
+.dokrot__form__input
+	background: inherit
+	border: none
+	text-align: left
+	color: $white
+	border-bottom: 1px solid $white
+	padding: 5px
+	&::placeholder
+		text-align: left
+.dokrot__form__submit
+	border: none
+	background: $form
+	margin-top: 10px
+	padding: 12px 40px 10px
+	&:hover
+		background: lighten($form, 5%)

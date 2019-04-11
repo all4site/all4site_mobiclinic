@@ -42,15 +42,6 @@ function afs_add_posttype_doctors() {
 			array(
 				'labels'             => array(
 					'name'              => 'Терапевты', // Основное название типа записи
-					// 'singular_name'      => 'Мнение', // отдельное название записи типа Book
-					// 'add_new'            => 'Добавить новую',
-					// 'add_new_item'       => 'Добавить новую книгу',
-					// 'edit_item'          => 'Редактировать книгу',
-					// 'new_item'           => 'Новая книга',
-					// 'view_item'          => 'Посмотреть книгу',
-					// 'search_items'       => 'Найти книгу',
-					// 'not_found'          => 'Книг не найдено',
-					// 'not_found_in_trash' => 'В корзине книг не найдено',
 					'parent_item_colon' => '',
 					'menu_name'         => 'Терапевты',
 
@@ -76,15 +67,6 @@ function afs_add_posttype_doctors() {
 			array(
 				'labels'             => array(
 					'name'              => 'Неврапатолог', // Основное название типа записи
-							 // 'singular_name'      => 'Мнение', // отдельное название записи типа Book
-							 // 'add_new'            => 'Добавить новую',
-							 // 'add_new_item'       => 'Добавить новую книгу',
-							 // 'edit_item'          => 'Редактировать книгу',
-							 // 'new_item'           => 'Новая книга',
-							 // 'view_item'          => 'Посмотреть книгу',
-							 // 'search_items'       => 'Найти книгу',
-							 // 'not_found'          => 'Книг не найдено',
-							 // 'not_found_in_trash' => 'В корзине книг не найдено',
 					'parent_item_colon' => '',
 					'menu_name'         => 'Неврапатолог',
 
@@ -110,15 +92,6 @@ function afs_add_posttype_doctors() {
 			array(
 				'labels'             => array(
 					'name'              => 'Хирурги', // Основное название типа записи
-							 // 'singular_name'      => 'Мнение', // отдельное название записи типа Book
-							 // 'add_new'            => 'Добавить новую',
-							 // 'add_new_item'       => 'Добавить новую книгу',
-							 // 'edit_item'          => 'Редактировать книгу',
-							 // 'new_item'           => 'Новая книга',
-							 // 'view_item'          => 'Посмотреть книгу',
-							 // 'search_items'       => 'Найти книгу',
-							 // 'not_found'          => 'Книг не найдено',
-							 // 'not_found_in_trash' => 'В корзине книг не найдено',
 					'parent_item_colon' => '',
 					'menu_name'         => 'Хирурги',
 
@@ -144,15 +117,6 @@ function afs_add_posttype_doctors() {
 			array(
 				'labels'             => array(
 					'name'              => 'Дерматологи', // Основное название типа записи
-							 // 'singular_name'      => 'Мнение', // отдельное название записи типа Book
-							 // 'add_new'            => 'Добавить новую',
-							 // 'add_new_item'       => 'Добавить новую книгу',
-							 // 'edit_item'          => 'Редактировать книгу',
-							 // 'new_item'           => 'Новая книга',
-							 // 'view_item'          => 'Посмотреть книгу',
-							 // 'search_items'       => 'Найти книгу',
-							 // 'not_found'          => 'Книг не найдено',
-							 // 'not_found_in_trash' => 'В корзине книг не найдено',
 					'parent_item_colon' => '',
 					'menu_name'         => 'Дерматолог',
 
@@ -178,15 +142,6 @@ function afs_add_posttype_doctors() {
 			array(
 				'labels'             => array(
 					'name'              => 'Новости', // Основное название типа записи
-							 // 'singular_name'      => 'Мнение', // отдельное название записи типа Book
-							 // 'add_new'            => 'Добавить новую',
-							 // 'add_new_item'       => 'Добавить новую книгу',
-							 // 'edit_item'          => 'Редактировать книгу',
-							 // 'new_item'           => 'Новая книга',
-							 // 'view_item'          => 'Посмотреть книгу',
-							 // 'search_items'       => 'Найти книгу',
-							 // 'not_found'          => 'Книг не найдено',
-							 // 'not_found_in_trash' => 'В корзине книг не найдено',
 					'parent_item_colon' => '',
 					'menu_name'         => 'Новости',
 
@@ -211,15 +166,6 @@ function afs_add_posttype_doctors() {
 			array(
 				'labels'             => array(
 					'name'              => 'Акции', // Основное название типа записи
-				// 'singular_name'      => 'Акции', // отдельное название записи типа Book
-				// 'add_new'            => 'Добавить новую',
-				// 'add_new_item'       => 'Добавить новую книгу',
-				// 'edit_item'          => 'Редактировать книгу',
-				// 'new_item'           => 'Новая книга',
-				// 'view_item'          => 'Посмотреть книгу',
-				// 'search_items'       => 'Найти книгу',
-				// 'not_found'          => 'Книг не найдено',
-				// 'not_found_in_trash' => 'В корзине книг не найдено',
 					'parent_item_colon' => '',
 					'menu_name'         => 'Акции',
 
@@ -245,15 +191,6 @@ function afs_add_posttype_doctors() {
 			array(
 				'labels'             => array(
 					'name'              => 'Цены', // Основное название типа записи
-				// 'singular_name'      => 'Акции', // отдельное название записи типа Book
-				// 'add_new'            => 'Добавить новую',
-				// 'add_new_item'       => 'Добавить новую книгу',
-				// 'edit_item'          => 'Редактировать книгу',
-				// 'new_item'           => 'Новая книга',
-				// 'view_item'          => 'Посмотреть книгу',
-				// 'search_items'       => 'Найти книгу',
-				// 'not_found'          => 'Книг не найдено',
-				// 'not_found_in_trash' => 'В корзине книг не найдено',
 					'parent_item_colon' => '',
 					'menu_name'         => 'Цены',
 
@@ -270,6 +207,54 @@ function afs_add_posttype_doctors() {
 				'menu_position'      => 20,
 				'supports'           => array( 'title' ),
 			 // 'taxonomies' => array('category'),
+			 // 'show_in_rest'       => true
+			)
+		);
+		register_post_type(
+			'contacts',
+			array(
+				'labels'             => array(
+					'name'              => 'Контакты', // Основное название типа записи
+					'parent_item_colon' => '',
+					'menu_name'         => 'Контакты',
+
+				),
+				'public'             => true,
+				'publicly_queryable' => true,
+				'show_ui'            => true,
+				'show_in_menu'       => true,
+				'query_var'          => true,
+				'rewrite'            => true,
+				'capability_type'    => 'post',
+				'has_archive'        => true,
+				'hierarchical'       => true,
+				'menu_position'      => 20,
+				'supports'           => array( 'title' ),
+			 // 'taxonomies' => array('category'),
+			 // 'show_in_rest'       => true
+			)
+		);
+		register_post_type(
+			'about-us',
+			array(
+			'labels'             => array(
+					'name'              => 'О нас', // Основное название типа записи
+					'parent_item_colon' => '',
+					'menu_name'         => 'О нас',
+
+				),
+				'public'             => true,
+				'publicly_queryable' => true,
+				'show_ui'            => true,
+				'show_in_menu'       => true,
+				'query_var'          => true,
+				'rewrite'            => true,
+				'capability_type'    => 'post',
+				'has_archive'        => true,
+				'hierarchical'       => true,
+				'menu_position'      => 20,
+				'supports'           => array( 'title', 'thumbnail', 'editor'  ),
+				// 'taxonomies' => array('category'),
 			 // 'show_in_rest'       => true
 			)
 		);
