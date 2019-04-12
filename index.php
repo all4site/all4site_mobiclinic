@@ -33,7 +33,7 @@
 	<div class="wrap">
 		<div class="home_about__content">
 			<div class="home_about__thumbnail">
-				<?php the_post_thumbnail(); ?>
+				<?php echo get_the_post_thumbnail(167); ?>
 			</div>
 			<div class="home_about__text">
 				<h2><?php echo $post_home__about['post_title']; ?>
@@ -43,7 +43,7 @@
 					echo mb_strimwidth($content, 0, 500, '...'); ?>
 				</p>
 				<a href="<?php the_permalink(167); ?>">подробнее...</a>
-
+				<?php wp_reset_postdata(); ?>
 			</div>
 		</div>
 	</div>
@@ -68,7 +68,6 @@
 				<h4>КОМПЛЕКСНІ ПАКЕТИ</h4>
 				<div class="home_doing__icon">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/stethoscope.png" alt="">
-					<img src="img/strahovca.png" alt="">
 				</div>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rerum modi eius repellat
 					aperiam reprehenderit quo fugiat recusandae dolorum placeat?</p>
@@ -78,7 +77,6 @@
 				<h4>КОМПЛЕКСНІ ПАКЕТИ</h4>
 				<div class="home_doing__icon">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/strahovca.png" alt="">
-					<img src="img/strahovca.png" alt="">
 				</div>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rerum modi eius repellat
 					aperiam reprehenderit quo fugiat recusandae dolorum placeat?</p>
@@ -88,7 +86,6 @@
 				<h4>КОМПЛЕКСНІ ПАКЕТИ</h4>
 				<div class="home_doing__icon">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/mediclaCare.png" alt="">
-					<img src="img/strahovca.png" alt="">
 				</div>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rerum modi eius repellat
 					aperiam reprehenderit quo fugiat recusandae dolorum placeat?</p>
@@ -106,26 +103,24 @@
 		<div class="home_doctors__wrap">
 			<?php
 			$categories = get_categories(
-				[
+				array(
 					'orderby'    => 'name',
 					'order'      => 'ASC',
 					'child_of'   => '4',
 					'hide_empty' => 0,
-				]
+				)
 			);
 			?>
 			<div class="accordeon">
 				<?php
-				foreach ($categories
-					as $category) {
-					wp_reset_postdata();
+				foreach ($categories as $category) {
 					$catID = $category->cat_ID;
+					global $posts;
 					$posts = get_posts(
-						[
-							// 'numberposts' => 5,
+						array(
 							'category'  => $catID,
 							'post_type' => 'any',
-						]
+						)
 					);
 					?>
 
@@ -134,25 +129,22 @@
 						</h5>
 					</div>
 					<div class="bottomAccordeon home_doctors__bottomaccordeon">
-						<?php
-						foreach ($posts as $post) {
-							?>
+						<?php foreach ($posts as $post) {
+							setup_postdata($post); ?>
 							<div class="home_doctors__inner">
 								<div class="home_doctors__img">
 									<?php the_post_thumbnail(); ?>
 								</div>
 								<div class="home_doctors__text">
-									<h4><?php the_title(); ?>
-									</h4>
+									<h4><?php the_title(); ?></h4>
 									<?php the_content(); ?>
 									<a href="<?php the_permalink(); ?>">подробнее</a>
 								</div>
 							</div>
-						<?php
-					}
-					echo '</div>';
-				}
-				?>
+							<?php wp_reset_query();
+						}
+						echo '</div>';
+					}	?>
 				</div>
 			</div>
 		</div>
@@ -205,7 +197,7 @@
 				<?php
 				$posts = get_posts(
 					[
-						'category_name' => 'novosti',
+						'category_name' => 'aktsii',
 						'post_type'     => 'any',
 						'numberposts'   => 5,
 					]

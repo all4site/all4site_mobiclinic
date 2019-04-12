@@ -22,19 +22,19 @@ gulp.task('tiny', function () {
 });
 
 // WORK
-gulp.task('sass', function () {
-	return gulp.src('sass/**/*.sass')
-		.pipe(wait(500))
-		.pipe(sass.sync())
-		.on('error', notify.onError({
-			message: "<%= error.message %>",
-			title: "Sass Error!"
-		}))
-		.pipe(autoprefixer(['last 2 versions', '> 1%', 'ie 8'], {
-			cascade: true
-		}))
-		.pipe(gulp.dest('css/'))
-});
+// gulp.task('sass', function () {
+// 	return gulp.src('sass/**/*.sass')
+// 		.pipe(wait(500))
+// 		.pipe(sass.sync())
+// 		.on('error', notify.onError({
+// 			message: "<%= error.message %>",
+// 			title: "Sass Error!"
+// 		}))
+// 		.pipe(autoprefixer(['last 2 versions', '> 1%', 'ie 8'], {
+// 			cascade: true
+// 		}))
+// 		.pipe(gulp.dest('css/'))
+// });
 
 gulp.task('browser-sync', function () {
 	browserSync({
@@ -46,8 +46,8 @@ gulp.task('browser-sync', function () {
 	});
 });
 
-gulp.task('default', ['browser-sync', 'sass'], function () {
-	gulp.watch('sass/*.sass', ['sass']);
+gulp.task('default', ['browser-sync'], function () {
+	// gulp.watch('sass/*.sass', ['sass']);
 	gulp.watch('js/**/*.js', browserSync.reload);
 	gulp.watch('**/*.php', browserSync.reload);
 	gulp.watch('css/*.css', browserSync.reload);

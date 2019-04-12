@@ -31,8 +31,7 @@
 								</div>
 								<div class="doctors_content__text">
 									<h4 class='tac'><?php the_title(); ?></h4>
-									<span><?php $content = get_the_content();
-												echo mb_strimwidth($content, 0, 200, '...'); ?></span>
+									<span><?php $content = get_the_content();	echo mb_strimwidth($content, 0, 200, '...'); ?></span>
 									<a class='doctors__more btn' href="<?php the_permalink(); ?>">подробнее</a>
 								</div>
 
@@ -54,8 +53,7 @@
 							?>
 							<div class="doctors_aside__category">
 								<a href="<?php echo get_category_link($category->term_id); ?>">
-									<h2><?php
-											echo $category->name;
+									<h2><?php echo $category->name;
 											?>
 									</h2>
 								</a>

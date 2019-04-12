@@ -19,7 +19,7 @@
 				?>
 
 				<div class="donate grid">
-					<div class="btn menu_top__big__btn grid"><a href="#!">поддержать</a></div>
+					<div class="btn menu_top__big__btn grid"><a href="#!">записаться</a></div>
 				</div>
 			</div>
 		</div>

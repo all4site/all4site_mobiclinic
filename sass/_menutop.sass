@@ -48,23 +48,21 @@
 			cursor: pointer
 
 			& > a
-				color: $red
-				font-weight: bold
+				color: $green
 				transition: all 0.5s ease
 				position: relative
 
-				&:after
-					content: ""
-					position: absolute
-					border-bottom: 1px solid $red
-					width: 100%
-					bottom: -10px
-					left: 0px
-					opacity: 1
+				// &:after
+				// 	content: ""
+				// 	position: absolute
+				// 	border-bottom: 1px solid $red
+				// 	width: 100%
+				// 	bottom: -10px
+				// 	left: 0px
+				// 	opacity: 1
 
 		& > a
-			color: $blue
-			font-weight: bold
+			color: $black
 			transition: all 0.5s ease
 			position: relative
 
@@ -85,8 +83,7 @@
 		position: relative
 
 		a
-			color: $blue
-			font-weight: bold
+			color: $black
 			transition: all 0.5s ease
 			position: relative
 
@@ -107,18 +104,19 @@
 
 		li
 			border-bottom: 1px solid lighten($black, 80%)
+			background-image: url('../img/bg_green.png')
+			background-color: $green
 			padding: 0px 40px 0px 10px
 			font-size: 0.8rem
-			min-width: 250px
 			white-space: nowrap
-			background: darken($white, 2%)
-			width: 100%
+			color: $white
 
 			a
 				padding: 10px 0
+				color: $white
 
 			a:hover
-				color: $red
+				color: $give
 
 			&:last-child
 				border-bottom: none
