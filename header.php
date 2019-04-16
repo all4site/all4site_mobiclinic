@@ -10,4 +10,4 @@
 
 </head>
 <body>
-<?php get_template_part('template_parts/menu');?>
+<?php get_template_part('template-parts/menu');?>

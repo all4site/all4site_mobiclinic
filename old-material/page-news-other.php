@@ -7,9 +7,13 @@ get_header(); ?>
 				<?php
 				$cat_ID = get_query_var('cat');
 				$currentpage = get_query_var('paged');
+				$curcatname =  get_query_var('category_name');
+				$getparent = get_ancestors($cat_ID, 'category', '');
+				$getpaarentID = $getparent[0];
+				$posttype = get_query_var('post_type');
 				$postperpage = 3;
 				$wp_query    = new WP_Query(array(
-					'post_type'      => 'news',
+					'post_type'      => $posttype,
 					'posts_per_page' => $postperpage,
 					'paged'          => $currentpage,
 					'cat'    => $cat_ID,
@@ -39,7 +43,7 @@ get_header(); ?>
 						$categories = get_categories(array(
 							'orderby'  => 'name',
 							'order'    => 'DESC',
-							'child_of' => 13
+							'child_of' => $getpaarentID
 
 
 						));
@@ -57,7 +61,7 @@ get_header(); ?>
 						<h2>Последние</h2>
 						<?php
 						$posts = get_posts(array(
-							'category_name' => 'novosti',
+							'category_name' => $curcatname,
 							'post_type'     => 'any',
 							'numberposts'   => 3
 						));
@@ -75,7 +79,7 @@ get_header(); ?>
 						<h2>Популярные</h2>
 						<?php
 						$posts = get_posts(array(
-							'category_name' => 'novosti',
+							'category' => $getpaarentID,
 							'meta_key'      => 'views',
 							'orderby'       => 'meta_value_num',
 							'post_type'     => 'any',

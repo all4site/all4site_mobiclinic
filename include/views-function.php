@@ -60,6 +60,7 @@ function all4site_postviews()
 // Добавляем произвольное поле в админку
 
 add_filter('manage_news_posts_columns', 'add_views_column', 4);
+add_filter( 'manage_poslugi_posts_columns', 'add_views_column', 4);
 function add_views_column($columns)
 {
     $num = 2; // после какой по счету колонки вставлять новые

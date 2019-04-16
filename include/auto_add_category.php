@@ -24,6 +24,9 @@ function afs_category_add() {
 	if($posttype == "news"){
 		wp_set_post_categories($postId, array(13), true);
 	}
+	if($posttype == "poslugi"){
+		wp_set_post_categories($postId, array(18), true);
+	}
 }
 
 ?>

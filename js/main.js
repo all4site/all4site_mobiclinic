@@ -51,5 +51,17 @@ $(document).ready(function () {
 
 });
 //END SLIDER
-
+// START POPUP SUBSCRIBE
+	$(document).ready(function () {
+		$('.menu_top__big__btn').click(function () {
+			$('.popup').fadeIn();
+		});
+	});
+	$(document).mouseup(function (e) { // по клику вне попапа
+		var popup = $('.popup_wrap');
+		if (e.target!=popup[0]&&popup.has(e.target).length === 0){
+			$('.popup').fadeOut();
+		}
+	});
+// END POPUP SUBSCRIBE
 })(jQuery);

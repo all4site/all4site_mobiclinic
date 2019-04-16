@@ -63,3 +63,22 @@
 	<!-- END SMALL NAVIGATION -->
 	</nav>
 <!-- END NAVIGATION -->
+
+<!--START POPUP -->
+<section class="popup">
+  <div class="popup_hide">
+  <div class="popup_wrap">
+	<form action="#!" class="popup__form">
+	  <input type="name" name="name" placeholder="имя" class="popup__input" required>
+	  <input type="tel" name="phone" placeholder="телефон" class="popup__input" required>
+	  <input type="submit" value="отправить" class="popup__send">
+	</form>
+	<div class="popup_forn__thank">
+	  <h2>Спасибо за Ваше обращение.</h2>
+	  <h2>Мы свяжемся с вами в ближайшее время</h2>
+	</div>
+  </div>
+  </div>
+</section>
+
+<!--END POPUP -->

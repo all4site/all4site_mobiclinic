@@ -265,4 +265,29 @@ function afs_add_posttype_doctors()
 			// 'show_in_rest'       => true
 		)
 	);
+	register_post_type(
+		'poslugi',
+		array(
+			'labels'             => array(
+				'name'              => 'Послуги', // Основное название типа записи
+				'parent_item_colon' => '',
+				'menu_name'         => 'Послуги',
+
+			),
+			'menu_icon'						=> 'dashicons-schedule',
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => true,
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => true,
+			'menu_position'      => 20,
+			'supports'           => array('title', 'thumbnail', 'editor'),
+			'taxonomies' => array('category'),
+			// 'show_in_rest'       => true
+		)
+	);
 }
