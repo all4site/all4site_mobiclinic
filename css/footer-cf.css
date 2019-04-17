@@ -1,0 +1,5 @@
+.wpcf7{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: minmax(100px, 350px);
+}

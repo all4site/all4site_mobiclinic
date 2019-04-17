@@ -27,11 +27,12 @@
 			<div class="footer__subscribe">
 				<h2 class='tac'>ЗАПИСАТЬСЯ</h2>
 				<div class="footer__form__wrap">
-					<form action="#!" class="footer__form">
+				  	<?php echo do_shortcode('[contact-form-7 id="188" title="Footer Contact Form_copy"]'); ?>
+		<!--			<form action="#!" class="footer__form">
 						<input type="text" name="name" placeholder="имя" class="footer__form__input">
 						<input type="phone" name="email" placeholder="телефон" class="footer__form__input">
 						<input type="submit" value="отправить" class="btn footer__form__submit">
-					</form>
+					</form>-->
 				</div>
 				<div class="footer__social">
 					<a href="#!" class="footer__social__inner">

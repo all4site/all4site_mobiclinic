@@ -28,3 +28,4 @@ add_action('admin_init', 'afs_my_remove_menu_pages');
 
 //Setup
 add_theme_support('post-thumbnails');
+

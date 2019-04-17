@@ -5,10 +5,10 @@ $parentSlug     = $category->slug;
 if ( $parentID > 0 ) {
   get_template_part( 'template-parts/page', 'all' );
 }
-if ( $parentID == 0 && $parentSlug != 'aktsii') {
+if ( $parentID == 0 && $parentSlug != 'aktsii' ) {
   get_template_part( 'template-parts/category', 'all' );
 }
-if ( $parentSlug == 'aktsii') {
+if ( $parentSlug == 'aktsii' ) {
   get_template_part( 'template-parts/category', 'aktsii' );
 }
 ?>
