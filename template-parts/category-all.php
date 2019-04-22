@@ -26,12 +26,10 @@
 			</div>
 			<div class="news_content__text">
 			  <h4 class='tac'><?php the_title(); ?></h4>
-			  <span>
-								<?php
-								$content = get_the_content();
-								echo mb_strimwidth( $content, 0, 200, '...' );
-								?>
-							</span>
+			  <div class="news_content__text__p"><span>
+				<?php $content = get_the_content();
+				echo mb_strimwidth( $content, 0, 200, '...' ); ?>
+			  </span></div>
 			  <a class='news__more' href="<?php the_permalink(); ?>">подробнее...</a>
 			</div>
 		  </div>
@@ -41,7 +39,7 @@
 		endwhile;
 		?>
 	  </div>
-	  <?php get_template_part('template-parts/asside', 'category')?>
+	  <?php get_template_part( 'template-parts/asside', 'category' ) ?>
 	  <section class="pagination">
 		<?php all4site_pagination(); ?>
 	  </section>

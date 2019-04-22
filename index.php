@@ -1,25 +1,37 @@
 <?php get_header(); ?>
+<?php $fields = CFS()->get( 'contacts', '164' );
+$greenbox_fields = CFS()->get( 'contacts_green_box', '164' );
+$accreditation = CFS()->get( 'accreditation', '164' );
+
+?>
+
   <!-- START HEADER -->
   <section class="home_top">
 	<div class="home_top__text">
 	  <div class="home_top__wrap">
 		<div class="home_top__phone">
-		  <span>тел:</span>
-		  <span>+38 (044) 528 83 30</span>
-		  <span>+38 (044) 529 25 50</span>
-		  <span>+38 (067) 240 24 95</span>
+		  <?php foreach ( $fields as $field ) {
+		  ?>
+		  <span><?php echo $field['phone_name']; ?></span>
+		  <?php foreach ( $field['contacts_phone'] as $phone ) { ?>
+		  <span><?php echo $phone['phonr_number']; ?></span>
+		  <?php } ?>
+		  <?php } ?>
 		</div>
 		<div class="home_top__email">
-		  <span>email:</span>
-		  <span>contact@mobiclinic.com.ua</span>
+		  <span><?php echo $field['email_name']; ?></span>
+		  <?php foreach ( $field['email'] as $emails ) { ?>
+			<span><?php echo $emails['email_date']; ?></span>
+		  <?php } ?>
 		</div>
 	  </div>
 	</div>
+
 	<div class="home_bottom__text">
 	  <div class="home_bottom__wrap">
-		<span>Ліцензія АЕ №281949 від 19.12.2013р.</span>
+		<span><?php echo CFS()->get( 'licens', '164' ); ?><?php echo CFS()->get( 'ls_data', '164' );?></span>
 		<div class="home_bottom_hr"></div>
-		<span>Акредитація МЗ №013373 від 23.02.2017р.</span>
+		<span><?php echo CFS()->get( 'accreditation', '164' ); ?><?php echo CFS()->get( 'ac_data', '164' )  ?></span>
 	  </div>
 	</div>
   </section>

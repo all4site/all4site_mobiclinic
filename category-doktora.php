@@ -31,8 +31,8 @@
 								</div>
 								<div class="doctors_content__text">
 									<h4 class='tac'><?php the_title(); ?></h4>
-									<span><?php $content = get_the_content();
-												echo mb_strimwidth($content, 0, 200, '...'); ?></span>
+								  <div class="news_content__text__p"><span><?php $content = get_the_content();
+									  echo mb_strimwidth( $content, 0, 200, '...' ); ?></span></div>
 									<a class='doctors__more btn' href="<?php the_permalink(); ?>">подробнее</a>
 								</div>
 

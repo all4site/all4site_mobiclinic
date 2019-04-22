@@ -21,8 +21,8 @@
 						</div>
 						<div class="akcii__text">
 							<h4 class='tac'><?php the_title(); ?></h4>
-							<span><?php $content = get_the_content();
-										echo mb_strimwidth($content, 0, 350, '...'); ?></span>
+						  <div class="news_content__text__p"><span><?php $content = get_the_content();
+							  echo mb_strimwidth( $content, 0, 350, '...' ); ?></span></div>
 							<div class="akcii__text__date">
 								<span class='post_data'><?php echo get_the_date(); ?></span>
 								<a class='akcii__more' href="<?php the_permalink(); ?>">подробнее</a>

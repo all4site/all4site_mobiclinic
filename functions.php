@@ -29,3 +29,11 @@ add_action('admin_init', 'afs_my_remove_menu_pages');
 //Setup
 add_theme_support('post-thumbnails');
 
+add_filter( 'shortcode_atts_wpcf7', 'custom_shortcode_atts_wpcf7', 10, 3 );
+function custom_shortcode_atts_wpcf7( $out, $pairs, $atts ) {
+  if( isset($atts['myemail']) )
+	$out['myemail'] = $atts['myemail'];
+
+  return $out;
+}
+

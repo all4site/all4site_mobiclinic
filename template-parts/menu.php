@@ -1,6 +1,5 @@
 <!-- START NAVIGATION -->
 <nav class="navwrapper">
-  <div class="wrap_menu">
 	<!-- START BIG NAVIGATION -->
 	<div class="menu_top__big">
 	  <div class="menu_top__big__logo grid">
