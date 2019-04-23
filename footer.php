@@ -7,22 +7,29 @@
 <!-- END MAP -->
 
 <!-- START FOOTER -->
+<?php $fields = CFS()->get( 'contacts', '164' );
+$address_name    = CFS()->get_field_info( 'contacts_address','164' );?>
 <footer class="footer">
 	<div class="wrap">
-		<div class="footer__inner">
-			<div class="footer__contacts">
-				<h2 class='tac'>КОНТАКТЫ</h2>
-				<div class="footer__contacts__inner">
-					<span>тел:</span>
-					<span>+38 (044) 528 83 30</span>
-					<span>+38 (044) 529 25 50</span>
-					<span>+38 (067) 240 24 95</span>
-					<span>email:</span>
-					<span>contact@mobiclinic.com.ua</span>
-					<span>адрес:</span>
-					<span>М Либідська</span>
-					<span>вул. Філатова,1/22</span>
-				</div>
+	  <div class="footer__inner">
+		<div class="footer__contacts">
+		  <h2 class='tac'>КОНТАКТЫ</h2>
+		  <div class="footer__contacts__inner">
+			<?php foreach ( $fields as $field ) {
+			  ?>
+			  <span><?php echo $field['phone_name']; ?></span>
+			  <?php foreach ( $field['contacts_phone'] as $phone ) { ?>
+				<span><?php echo $phone['phonr_number']; ?></span>
+			  <?php } ?>
+			<?php } ?>
+			<span><?php echo $field['email_name']; ?></span>
+			<?php foreach ( $field['email'] as $emails ) { ?>
+			  <span><?php echo $emails['email_date']; ?></span>
+			<?php } ?>
+			<span class="address"><?php echo $address_name['label'] . ":"; ?></span>
+			<span><?php echo CFS()->get( 'contacts_metro', '164' ); ?></span>
+			<span><?php echo CFS()->get( 'contacts_street', '164' ); ?></span>
+		  </div>
 			</div>
 			<div class="footer__subscribe">
 				<h2 class='tac'>ЗАПИСАТЬСЯ</h2>
@@ -35,13 +42,18 @@
 					</form>-->
 				</div>
 				<div class="footer__social">
-					<a href="#!" class="footer__social__inner">
+                    <?php
+                    $facebook = CFS()->get( 'facebook', '190' );
+                    $youtube = CFS()->get( 'youtube', '190' );
+                    $instagram = CFS()->get( 'instagram', '190' );
+                    ?>
+					<a href="<?php echo $facebook['url'];?>" target="_blank" class="footer__social__inner">
 						<i class="fab fa-facebook-f"></i>
 					</a>
-					<a href="#!" class="footer__social__inner">
+					<a href="<?php echo $youtube['url'];?>" target="_blank" class="footer__social__inner">
 						<i class="fab fa-youtube"></i>
 					</a>
-					<a href="#!" class="footer__social__inner">
+					<a href="<?php echo $instagram['url'];?>" target="_blank" class="footer__social__inner">
 						<i class="fab fa-instagram"></i>
 					</a>
 				</div>
@@ -65,6 +77,11 @@
 		<span>© Медична Мобільна Клініка 2017. All Rights Reserved</span>
 	</div>
 </footer>
+<div class="scrolltop">
+    <a href="#top" data-target="menu">
+       <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
 <!-- END FOOTER -->
 
 <?php wp_footer() ?>

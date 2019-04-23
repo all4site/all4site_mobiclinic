@@ -9,7 +9,6 @@
 		}
 
 
-
 		$(window).resize(function () {
 			var xalk = $('.accordeon>.bottomAccordeon').first();
 
@@ -39,17 +38,26 @@
 	});
 
 //START SLIDER
-$(document).ready(function () {
-	$('.home_slider__box').slick({
-		prevArrow: '<div class="arrow left"><img src="/wp-content/themes/all4site_mobiclinic/img/left.svg", alt=""></div>',
-		nextArrow: '<div class="arrow right"><img src="/wp-content/themes/all4site_mobiclinic/img/right.svg", alt=""></div>',
-		// arrows: false,
+	$(document).ready(function () {
+		$('.home_slider__box').slick({
+			prevArrow: '<div class="arrow left"><img src="/wp-content/themes/all4site_mobiclinic/img/left.svg", alt=""></div>',
+			nextArrow: '<div class="arrow right"><img src="/wp-content/themes/all4site_mobiclinic/img/right.svg", alt=""></div>',
+			// arrows: false,
 			infinite: true,
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			});
+			// autoplay: true
+			responsive: [
+				{
+					breakpoint: 980,
+					settings: {
+						arrows: false
+					}
+				}
+			]
+		});
 
-});
+	});
 //END SLIDER
 // START POPUP SUBSCRIBE
 	$(document).ready(function () {
@@ -59,9 +67,55 @@ $(document).ready(function () {
 	});
 	$(document).mouseup(function (e) { // по клику вне попапа
 		var popup = $('.popup_wrap');
-		if (e.target!=popup[0]&&popup.has(e.target).length === 0){
+		if (e.target != popup[0] && popup.has(e.target).length === 0) {
 			$('.popup').fadeOut();
 		}
 	});
-// END POPUP SUBSCRIBE
+// END POPUP SUBSCRIB
+
+//START ANIMATE SCROLL
+	$(document).ready(function () {
+		$('a[data-target="menu"]').click(function () {
+			var target = $(this).attr('href');
+			var wh = $(window).width();
+			$('a').removeClass('active');
+			$(this).addClass('active');
+
+			if (wh < 480) {
+				$('html, body').animate({
+					scrollTop: $(target).offset().top - 50
+				}, 700);
+			} else {
+				$('html, body').animate({
+					scrollTop: $(target).offset().top
+				}, 700);
+			}
+
+		});
+	});
+//END ANIMATE SCROLL
+
+// START Scroll top form botton
+	$(document).scroll(function () {
+		var y = $(this).scrollTop();
+		if (y > 300) {
+			$('.scrolltop').css('opacity', '1');
+		} else {
+			$('.scrolltop').css('opacity', '0');
+
+		}
+
+	});
+
+	$(document).scroll(function () {
+		var y = $(this).scrollTop();
+		var wh = $(window).width();
+		if (y > 50 && wh > 768) {
+			$('.menuscroll').addClass('menuscrollback');
+		} else {
+			$('.menuscroll').removeClass('menuscrollback');
+
+		}
+	});
+// END	Scroll top form botton
 })(jQuery);

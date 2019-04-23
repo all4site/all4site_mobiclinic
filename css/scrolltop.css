@@ -1,0 +1,14 @@
+.scrolltop{
+    display: grid;
+    opacity: 0;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(122, 187, 78, 0.6);
+    padding: 5px 10px;
+    transition: opacity .5s ease;
+    z-index: 99999;
+}
+.scrolltop i{
+    color: #ffffff;
+}

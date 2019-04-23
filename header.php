@@ -9,5 +9,5 @@
 	<?php wp_head(); ?>
 
 </head>
-<body>
+<body id="top" data-target="menu">
 <?php get_template_part('template-parts/menu');?>

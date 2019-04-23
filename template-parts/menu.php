@@ -4,7 +4,7 @@
 	<div class="menu_top__big">
 	  <div class="menu_top__big__logo grid">
 		<a href="<?php echo home_url(); ?>">
-		  <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt=""/>
+		  <img src="<?php echo CFS()->get( 'logo', '190' ); ?>" alt=""/>
 		</a>
 	  </div>
 
@@ -18,7 +18,7 @@
 	  ?>
 
 	  <div class="donate grid">
-		<div class="btn menu_top__big__btn grid"><a href="#!">записаться</a></div>
+		<div class="btn menu_top__big__btn grid"><a href="#!"><?php echo CFS()->get( 'button_text', '190' ); ?></a></div>
 	  </div>
 	</div>
   </div>
@@ -31,7 +31,7 @@
 	<div class="wrap_menu">
 	  <div class="menu_top_small__wrap">
 		<div class="menu_top_small__logo grid">
-		  <img src="<?php echo get_template_directory_uri() ?>/img/cbn-blue-logo.png" alt=""/>
+		  <img src="<?php echo CFS()->get( 'logo', '190' ); ?>" alt=""/>
 		</div>
 		<div class="cross">
 		  <div class="hamburger hamburger--slider">
@@ -53,7 +53,7 @@
 		  ) );
 		  ?>
 		  <div class="donate grid">
-			<div class="btn grid"><a href="#!">поддержать</a></div>
+			<div class="btn menu_top__big__btn grid"><a href="#!"><?php echo CFS()->get( 'button_text', '190' ); ?></a></div>
 		  </div>
 		</div>
 	  </div>

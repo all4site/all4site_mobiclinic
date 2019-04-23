@@ -1,12 +1,8 @@
 <?php get_header(); ?>
-<?php $fields = CFS()->get( 'contacts', '164' );
-$greenbox_fields = CFS()->get( 'contacts_green_box', '164' );
-$accreditation = CFS()->get( 'accreditation', '164' );
-
-?>
+<?php $fields = CFS()->get( 'contacts', '164' );?>
 
   <!-- START HEADER -->
-  <section class="home_top">
+  <section class="home_top" style="background-image: url(<?php echo CFS()->get( 'big_img', '190' ); ?>)">
 	<div class="home_top__text">
 	  <div class="home_top__wrap">
 		<div class="home_top__phone">
@@ -65,43 +61,43 @@ $accreditation = CFS()->get( 'accreditation', '164' );
   <!-- START DOING -->
   <section class="home_doing">
 	<div class="wrap">
-	  <h2>НАПРЯМКИ ДIЯЛЬНОСТI</h2>
+
+	  <h2><?php echo CFS()->get( 'diyalnist', '190' ); ?></h2>
 	  <div class="home_doing__wrap">
 		<div class="home_doing__block hoverable">
-		  <h4>КОМПЛЕКСНІ ПАКЕТИ</h4>
+		  <h4 class="tac"><?php echo CFS()->get( 'poskets_one', '190' ); ?></h4>
 		  <div class="home_doing__icon ssss ">
 			<img src="<?php echo get_template_directory_uri(); ?>/img/packets.png" alt="">
 		  </div>
-		  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rerum modi eius repellat
-			aperiam reprehenderit quo fugiat recusandae dolorum placeat?</p>
-		  <a href="">подробнее</a>
+		  <p><?php echo CFS()->get( 'poskets_one_text', '190' ); ?></p>
+            <?php echo CFS()->get( 'poskets_one_link', '190' ); ?>
 		</div>
+
 		<div class="home_doing__block hoverable ">
-		  <h4>КОМПЛЕКСНІ ПАКЕТИ</h4>
+		  <h4 class="tac"><?php echo CFS()->get( 'pockets_two', '190' ); ?></h4>
 		  <div class="home_doing__icon">
 			<img src="<?php echo get_template_directory_uri(); ?>/img/stethoscope.png" alt="">
 		  </div>
-		  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rerum modi eius repellat
-			aperiam reprehenderit quo fugiat recusandae dolorum placeat?</p>
-		  <a href="">подробнее</a>
+		  <p><?php echo CFS()->get( 'pockets_two_text', '190' ); ?></p>
+            <?php echo CFS()->get( 'poskets_two_link', '190' ); ?>
 		</div>
+
 		<div class="home_doing__block hoverable">
-		  <h4>КОМПЛЕКСНІ ПАКЕТИ</h4>
+		  <h4 class="tac"><?php echo CFS()->get( 'pockets_three', '190' ); ?></h4>
 		  <div class="home_doing__icon">
 			<img src="<?php echo get_template_directory_uri(); ?>/img/strahovca.png" alt="">
 		  </div>
-		  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rerum modi eius repellat
-			aperiam reprehenderit quo fugiat recusandae dolorum placeat?</p>
-		  <a href="">подробнее</a>
+		  <p><?php echo CFS()->get( 'pockets_three_text', '190' ); ?></p>
+            <?php echo CFS()->get( 'poskets_three_link', '190' ); ?>
 		</div>
+
 		<div class="home_doing__block hoverable">
-		  <h4>КОМПЛЕКСНІ ПАКЕТИ</h4>
+		  <h4 class="tac"><?php echo CFS()->get( 'pockets_four', '190' ); ?></h4>
 		  <div class="home_doing__icon">
 			<img src="<?php echo get_template_directory_uri(); ?>/img/mediclaCare.png" alt="">
 		  </div>
-		  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rerum modi eius repellat
-			aperiam reprehenderit quo fugiat recusandae dolorum placeat?</p>
-		  <a href="">подробнее</a>
+		  <p><?php echo CFS()->get( 'pockets_four_text', '190' ); ?></p>
+            <?php echo CFS()->get( 'poskets_four_link', '190' ); ?>
 		</div>
 	  </div>
 	</div>
@@ -190,12 +186,9 @@ $accreditation = CFS()->get( 'accreditation', '164' );
 			  <div class="home_slider__text">
 				<h3 class='tac'><?php the_title(); ?>
 				</h3>
-				<span>
-								<?php
-								$content = get_the_content();
-								echo mb_strimwidth( $content, 0, 250, '...' );
-								?>
-							</span>
+                  <div class="home_news_content__text">
+                    <?php $content = get_the_content();  echo mb_strimwidth($content, 0, 250, '...'); ?>
+                  </div>
 				<a href="<?php the_permalink(); ?>" class="more">подробнее...</a>
 			  </div>
 			</div>
@@ -225,12 +218,9 @@ $accreditation = CFS()->get( 'accreditation', '164' );
 			  <div class="home_slider__text">
 				<h3 class='tac'><?php the_title(); ?>
 				</h3>
-				<span>
-								<?php
-								$content = get_the_content();
-								echo mb_strimwidth( $content, 0, 250, '...' );
-								?>
-							</span>
+                  <div class="home_news_content__text">
+                    <?php $content = get_the_content(); echo mb_strimwidth($content, 0, 250, '...'); ?>
+                  </div>
 				<a href="<?php the_permalink(); ?>" class="more">подробнее...</a>
 			  </div>
 			</div>
