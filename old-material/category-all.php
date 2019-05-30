@@ -22,7 +22,7 @@
 		  ?>
 		  <div class="news_wrap__inner">
 			<div class="news_content__img">
-			  <?php the_post_thumbnail(); ?>
+			  <?php the_post_thumbnail('large'); ?>
 			</div>
 			<div class="news_content__text">
 			  <h4 class='tac'><?php the_title(); ?></h4>
@@ -39,11 +39,11 @@
 		endwhile;
 		?>
 	  </div>
-	  <?php get_template_part( 'template-parts/asside', 'category' ) ?>
-	  <section class="pagination">
-		<?php all4site_pagination(); ?>
-	  </section>
+	  <?php get_template_part( 'template-parts/asside', 'singlepage' ) ?>
 	</div>
+	<section class="pagination">
+	  <?php all4site_pagination(); ?>
+	</section>
   </div>
 </section>
 

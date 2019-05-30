@@ -3,7 +3,7 @@
 	<!-- START BIG NAVIGATION -->
 	<div class="menu_top__big">
 	  <div class="menu_top__big__logo grid">
-		<a href="<?php echo home_url(); ?>">
+		<a href="<?php echo home_url(); ?>" class="grid">
 		  <img src="<?php echo CFS()->get( 'logo', '190' ); ?>" alt=""/>
 		</a>
 	  </div>
@@ -31,7 +31,9 @@
 	<div class="wrap_menu">
 	  <div class="menu_top_small__wrap">
 		<div class="menu_top_small__logo grid">
-		  <img src="<?php echo CFS()->get( 'logo', '190' ); ?>" alt=""/>
+		  <a href="<?php echo home_url(); ?>" class="grid">
+			<img src="<?php echo CFS()->get('logo', '190'); ?>" alt=""/>
+		  </a>
 		</div>
 		<div class="cross">
 		  <div class="hamburger hamburger--slider">

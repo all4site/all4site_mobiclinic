@@ -17,7 +17,7 @@
 
 					<div class="akcii_wrap__inner">
 						<div class="akcii__img">
-							<?php the_post_thumbnail(); ?>
+							<?php the_post_thumbnail('medium'); ?>
 						</div>
 						<div class="akcii__text">
 							<h4 class='tac'><?php the_title(); ?></h4>

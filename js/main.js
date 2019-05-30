@@ -118,4 +118,11 @@
 		}
 	});
 // END	Scroll top form botton
+// START NEWS CATEGORY ACCORDEON
+	$(document).ready(function () {
+		$('.news_small_category').click(function () {
+			$('.wrap_for_mobile').slideToggle();
+		});
+	});
+// END NEWS CATEGORY ACCORDEON
 })(jQuery);

@@ -143,7 +143,7 @@
 			  setup_postdata( $post ); ?>
 			  <div class="home_doctors__inner">
 				<div class="home_doctors__img">
-				  <?php the_post_thumbnail(); ?>
+				  <?php the_post_thumbnail('medium'); ?>
 				</div>
 				<div class="home_doctors__text">
 				  <h4><?php the_title(); ?></h4>
@@ -181,7 +181,7 @@
 			?>
 			<div class="home_slider__wrap">
 			  <div class="home_slider__img">
-				<?php the_post_thumbnail(); ?>
+				<?php the_post_thumbnail('large'); ?>
 			  </div>
 			  <div class="home_slider__text">
 				<h3 class='tac'><?php the_title(); ?>
@@ -213,7 +213,7 @@
 			?>
 			<div class="home_slider__wrap">
 			  <div class="home_slider__img">
-				<?php the_post_thumbnail(); ?>
+				<?php the_post_thumbnail('large'); ?>
 			  </div>
 			  <div class="home_slider__text">
 				<h3 class='tac'><?php the_title(); ?>

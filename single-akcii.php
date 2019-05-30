@@ -4,7 +4,7 @@
 		<div class="wrap">
 			<div class="akcii__wrap">
 				<div class="akcii_singe__img">
-					<?php the_post_thumbnail(); ?>
+					<?php the_post_thumbnail('large'); ?>
 				</div>
 				<div class="akcii__text">
 					<h2 class="tac"><?php the_title(); ?></h2>

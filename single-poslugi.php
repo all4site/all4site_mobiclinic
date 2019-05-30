@@ -7,7 +7,7 @@ get_header(); ?>
 		  <?php while ( have_posts() ) : the_post(); ?>
 			<div class="news_single__wrap">
 			  <div class="news_single__img">
-				<?php the_post_thumbnail(); ?>
+				<?php the_post_thumbnail('large'); ?>
 			  </div>
 			  <div class="news_single__text">
 				<h4 class='tac'><?php the_title(); ?></h4>

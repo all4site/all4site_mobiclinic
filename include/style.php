@@ -16,7 +16,7 @@ function afs_enqueue() {
 
 }
 
-function afs_jquery_register() {
+function afs_jquery_reg() {
 	if ( ! is_admin() ) {
 		wp_deregister_script( 'jquery' );
 		wp_register_script( 'jquery', ( 'https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js' ), false, null, true );

@@ -6,7 +6,6 @@
 				<?php
 						$cat_ID = get_query_var('cat');
 						$posts = get_posts( array(
-							// 'numberposts' => 5,
 							'category'    => $cat_ID,
 							'post_type'   => 'any',
 						));?>

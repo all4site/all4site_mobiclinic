@@ -11,5 +11,6 @@
 		remove_menu_page('profile.php');
 		remove_menu_page('tools.php');
 		remove_menu_page('edit-comments.php');
+		remove_menu_page('wpcf7');
 	}
 } ?>
